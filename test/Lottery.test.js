@@ -50,5 +50,12 @@ describe('lottery' ,()=>{
         }catch(err){
             assert(err);
         }
+    });
+
+    it('send money to player and reset',async ()=>{
+        await lottery.methods.picWinner().send(
+            from : accounts[0]
+        ) ;
+
     })
-})
+}
